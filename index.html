@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Кулинарная история поколений ВГУИТ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="Логотип ВГУИТ" class="logo-img">
+                <h1 class="logo">ВГУИТ | Кулинарная история</h1>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="recipes.html" class="nav-link">Рецепты и фото</a>
+                <a href="team.html" class="nav-link">Команда</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>«Кулинарная история поколений ВГУИТ»</h1>
+                <p class="hero-text">
+                    Проект направлен на установление связи между поколениями через традиционную кухню. Команда студентов собирает у преподавателей ВГУИТ рецепты, которые имеют для них семейное или личное значение.
+                </p>
+                <a href="recipes.html" class="btn">Смотреть рецепты</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">О проекте</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Проблема</h3>
+                        <p>Ослабление неформальной связи между поколениями и постепенная утрата семейных кулинарных традиций. Молодое поколение не всегда знает истории и рецепты своих родителей, а опыт старшего поколения редко фиксируется в современной форме.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Наша цель</h3>
+                        <p>Сохранить и передать семейные ценности и кулинарные традиции между поколениями через сбор, приготовление и сравнение традиционных рецептов преподавателей и родственников студентов, создав мини-книги с рецептами.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Проект «Кулинарная история поколений ВГУИТ». Все права защищены.</p>
+            <p class="footer-small">ФГБОУ ВО «ВГУИТ», г. Воронеж, ул. Проспект революции, 19</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Наверх">↑</button>
+
+    <script>
+        // Кнопка Наверх
+        let mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function() { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        mybutton.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>

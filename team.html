@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда - Кулинарная история поколений ВГУИТ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="Логотип ВГУИТ" class="logo-img">
+                <h1 class="logo">ВГУИТ | Кулинарная история</h1>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="recipes.html" class="nav-link">Рецепты и фото</a>
+                <a href="team.html" class="nav-link active">Команда</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="background-color: #f0e6dc;">
+            <div class="container">
+                <h2 class="section-title">Команда проекта</h2>
+                <div class="team-grid">
+                    <div class="team-card team-lead">
+                        <h4>Филатов Максим Игоревич</h4>
+                        <span class="team-role">Руководитель проекта</span>
+                        <p>Координация команды, связь с преподавателями, контроль сроков, организация финального мероприятия.</p>
+                        <p><a href="tel:89611898226" class="team-contact">+7 961 189-82-26</a> | <a href="mailto:mak.13579filatov@yandex.ru" class="team-contact">mak.13579filatov@yandex.ru</a></p>
+                    </div>
+                    
+                    <div class="team-card">
+                        <h4>Вербицкий Андрей Станиславович</h4>
+                        <span class="team-role">Сбор рецептов и интервью, создание сайта</span>
+                        <a href="mailto:verbiczkij2007@list.ru" class="team-contact">verbiczkij2007@list.ru</a>
+                    </div>
+                    <div class="team-card">
+                        <h4>Волков Дмитрий Михайлович</h4>
+                        <span class="team-role">Приготовление, создание сайта</span>
+                        <a href="mailto:kakajabroni@mail.ru" class="team-contact">kakajabroni@mail.ru</a>
+                    </div>
+                    <div class="team-card">
+                        <h4>Макаренко Артем Александрович</h4>
+                        <span class="team-role">Видеосъёмка, создание сайта</span>
+                        <a href="mailto:Artemmakenko2007@mail.ru" class="team-contact">Artemmakenko2007@mail.ru</a>
+                    </div>
+                    <div class="team-card">
+                        <h4>Бочаров Никита Дмитриевич</h4>
+                        <span class="team-role">Закупка продуктов, создание сайта</span>
+                        <a href="mailto:niki020408@list.ru" class="team-contact">niki020408@list.ru</a>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <p style="color: #555; margin-bottom: 5px; font-size: 1.1rem;"><strong>Наставник проекта:</strong> Агаева Надежда Юрьевна (nadinn_ktn@mail.ru)</p>
+                    <p style="color: #777; font-size: 0.95rem;">Доцент кафедры философии и истории ВГУИТ</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Проект «Кулинарная история поколений ВГУИТ». Все права защищены.</p>
+            <p class="footer-small">ФГБОУ ВО «ВГУИТ», г. Воронеж, ул. Проспект революции, 19</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Наверх">↑</button>
+
+    <script>
+        // Кнопка Наверх
+        let mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function() { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        mybutton.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>

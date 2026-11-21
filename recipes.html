@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты - Кулинарная история поколений ВГУИТ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="Логотип ВГУИТ" class="logo-img">
+                <h1 class="logo">ВГУИТ | Кулинарная история</h1>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="recipes.html" class="nav-link active">Рецепты и фото</a>
+                <a href="team.html" class="nav-link">Команда</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="background-color: #f0e6dc; padding-bottom: 20px;">
+            <div class="container">
+                <h2 class="section-title">Фотографии блюд</h2>
+                <p style="text-align: center; color: #555; margin-top: -30px; margin-bottom: 30px;">Нажмите на фото, чтобы увеличить</p>
+                <div class="photo-grid">
+                    <div class="photo-card" onclick="openModal(this)">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Салат из сельди">
+                        <p>Салат из сельди ("Черная икра")</p>
+                    </div>
+                    <div class="photo-card" onclick="openModal(this)">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Курица с грибами">
+                        <p>Курица с грибами и сыром</p>
+                    </div>
+                    <div class="photo-card" onclick="openModal(this)">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ажурные блинчики">
+                        <p>Ажурные блинчики</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Семейные рецепты</h2>
+                <div class="recipe-grid">
+                    <!-- Рецепт 1 -->
+                    <article class="recipe-card">
+                        <h3>Салат из сельди ("Черная икра")</h3>
+                        <p><strong>Ингредиенты:</strong></p>
+                        <ul>
+                            <li>Сельдь — 1 шт. (200-250 г)</li>
+                            <li>Лук репчатый (средний) — 4 головки</li>
+                            <li>Масло растительное — 0,5 стакана</li>
+                            <li>Томатная паста — 2 ч. л.</li>
+                            <li>Крупа «саго» — 1 стакан</li>
+                        </ul>
+                        <p><strong>Приготовление:</strong></p>
+                        <ol>
+                            <li>Сельдь очистить, удалить кости.</li>
+                            <li>Лук порезать и обжарить на масле. Вытащить лук (масло сохранить).</li>
+                            <li>Лук и сельдь пропустить через мясорубку.</li>
+                            <li>В масло добавить томатную пасту и слегка обжарить.</li>
+                            <li>Отварить саго (2-3 минуты), промыть.</li>
+                            <li>Все ингредиенты смешать. Салат готов!</li>
+                        </ol>
+                    </article>
+
+                    <!-- Рецепт 2 -->
+                    <article class="recipe-card">
+                        <h3>Курица с грибами и сыром</h3>
+                        <p><strong>Ингредиенты:</strong></p>
+                        <ul>
+                            <li>Куриное филе — 4 шт.</li>
+                            <li>Шампиньоны — 300 г</li>
+                            <li>Лук репчатый — 1 шт.</li>
+                            <li>Сыр твердый — 150 г</li>
+                            <li>Сметана или майонез — 100 г</li>
+                            <li>Соль, перец, специи — по вкусу</li>
+                        </ul>
+                        <p><strong>Приготовление:</strong></p>
+                        <ol>
+                            <li>Куриное филе отбить, посолить и поперчить.</li>
+                            <li>Лук и грибы нарезать, обжарить до золотистого цвета.</li>
+                            <li>Выложить филе на противень, сверху грибную начинку.</li>
+                            <li>Посыпать сыром и сбрызнуть сметаной.</li>
+                            <li>Запекать при 180°C около 25-30 минут.</li>
+                        </ol>
+                    </article>
+
+                    <!-- Рецепт 3 -->
+                    <article class="recipe-card">
+                        <h3>Ажурные блинчики</h3>
+                        <p><strong>Ингредиенты:</strong></p>
+                        <ul>
+                            <li>Молоко — 1 стакан (250 мл)</li>
+                            <li>Мука пшеничная в/с — 1 стакан + 1 ст. л.</li>
+                            <li>Вода (крутой кипяток) — 1 стакан</li>
+                            <li>Яйца куриные — 2 шт.</li>
+                            <li>Масло растительное — 2 ст. л.</li>
+                            <li>Сахар — 2 ст. л.</li>
+                            <li>Соль — 0,5 ч. л.</li>
+                        </ul>
+                        <p><strong>Приготовление:</strong></p>
+                        <ol>
+                            <li>Смешиваем яйца, сахар и соль до однородной массы.</li>
+                            <li>Добавляем молоко и масло. Вводим просеянную муку, помешивая венчиком.</li>
+                            <li>Вводим крутой кипяток тонкой струйкой. Оставляем тесто на 15-20 минут.</li>
+                            <li>Выпекаем на хорошо разогретой сковороде.</li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Проект «Кулинарная история поколений ВГУИТ». Все права защищены.</p>
+            <p class="footer-small">ФГБОУ ВО «ВГУИТ», г. Воронеж, ул. Проспект революции, 19</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <button id="scrollTopBtn" title="Наверх">↑</button>
+
+    <script>
+        // Скрипт для модального окна (увеличение фото)
+        function openModal(element) {
+            let imgSrc = element.querySelector('img').src;
+            document.getElementById("modalImg").src = imgSrc;
+            document.getElementById("imageModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        // Кнопка Наверх
+        let mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function() { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        mybutton.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
