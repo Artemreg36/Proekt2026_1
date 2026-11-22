@@ -13,16 +13,18 @@
                 <img src="logo.png" alt="Логотип ВГУИТ" class="logo-img">
                 <h1 class="logo">ВГУИТ | Кулинарная история</h1>
             </a>
-            <nav class="nav">
+            <button class="burger" id="burgerBtn">☰</button>
+            <nav class="nav" id="navMenu">
                 <a href="index.html" class="nav-link active">Главная</a>
                 <a href="recipes.html" class="nav-link">Рецепты и фото</a>
-                <a href="team.html" class="nav-link">Команда</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- Баннер с анимацией частиц -->
+        <section class="hero fade-in">
+            <canvas id="particleCanvas"></canvas>
             <div class="container">
                 <h1>«Кулинарная история поколений ВГУИТ»</h1>
                 <p class="hero-text">
@@ -32,18 +34,98 @@
             </div>
         </section>
 
-        <section id="about" class="section">
+        <!-- Этапы проекта -->
+        <section class="section">
             <div class="container">
-                <h2 class="section-title">О проекте</h2>
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h3>Проблема</h3>
-                        <p>Ослабление неформальной связи между поколениями и постепенная утрата семейных кулинарных традиций. Молодое поколение не всегда знает истории и рецепты своих родителей, а опыт старшего поколения редко фиксируется в современной форме.</p>
+                <h2 class="section-title fade-in">Этапы реализации</h2>
+                <div class="steps-grid">
+                    <div class="step-card fade-in">
+                        <div class="step-icon">📝</div>
+                        <h3>Сбор рецептов</h3>
+                        <p>Интервью с преподавателями, запись семейных историй и секретов приготовления.</p>
                     </div>
-                    <div class="about-card">
-                        <h3>Наша цель</h3>
-                        <p>Сохранить и передать семейные ценности и кулинарные традиции между поколениями через сбор, приготовление и сравнение традиционных рецептов преподавателей и родственников студентов, создав мини-книги с рецептами.</p>
+                    <div class="step-card fade-in">
+                        <div class="step-icon">🛒</div>
+                        <h3>Закупка продуктов</h3>
+                        <p>Выбор доступных ингредиентов и подготовка к процессу готовки.</p>
                     </div>
+                    <div class="step-card fade-in">
+                        <div class="step-icon">🍳</div>
+                        <h3>Приготовление</h3>
+                        <p>Студенты готовят выбранные блюда и снимают процесс на видео.</p>
+                    </div>
+                    <div class="step-card fade-in">
+                        <div class="step-icon">🍽️</div>
+                        <h3>Дегустация</h3>
+                        <p>Сравнение блюд и оценка результата преподавателями.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Видео-блок -->
+        <section class="section" style="background-color: #f0e6dc;">
+            <div class="container">
+                <h2 class="section-title fade-in">Как это было</h2>
+                <div class="video-wrapper fade-in">
+                    <!-- Вставь сюда ссылку на ваше реальное видео (например, с YouTube или VK) -->
+                    <!-- Пока стоит заглушка с YouTube, чтобы ты видел, как это выглядит -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Видео проекта" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- О проекте -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">О проекте</h2>
+                <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="about-card fade-in" style="background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #8b6f5c;">
+                        <h3 style="color: #6b4c3b; margin-bottom: 15px;">Проблема</h3>
+                        <p>Ослабление неформальной связи между поколениями и постепенная утрата семейных кулинарных традиций. Молодое поколение не всегда знает истории и рецепты своих родителей.</p>
+                    </div>
+                    <div class="about-card fade-in" style="background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #8b6f5c;">
+                        <h3 style="color: #6b4c3b; margin-bottom: 15px;">Наша цель</h3>
+                        <p>Сохранить и передать семейные ценности и кулинарные традиции между поколениями через сбор, приготовление и сравнение традиционных рецептов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Команда -->
+        <section class="section" style="background-color: #f0e6dc;">
+            <div class="container">
+                <h2 class="section-title fade-in">Команда проекта</h2>
+                <div class="team-grid">
+                    <div class="team-card team-lead fade-in">
+                        <h4>Филатов Максим Игоревич</h4>
+                        <span class="team-role">Руководитель проекта</span>
+                        <p>Координация команды, связь с преподавателями, контроль сроков, организация финального мероприятия.</p>
+                        <p><a href="tel:89611898226" class="team-contact">+7 961 189-82-26</a> | <a href="mailto:mak.13579filatov@yandex.ru" class="team-contact">mak.13579filatov@yandex.ru</a></p>
+                    </div>
+                    <div class="team-card fade-in">
+                        <h4>Вербицкий Андрей Станиславович</h4>
+                        <span class="team-role">Сбор рецептов и интервью, создание сайта</span>
+                        <a href="mailto:verbiczkij2007@list.ru" class="team-contact">verbiczkij2007@list.ru</a>
+                    </div>
+                    <div class="team-card fade-in">
+                        <h4>Волков Дмитрий Михайлович</h4>
+                        <span class="team-role">Приготовление, создание сайта</span>
+                        <a href="mailto:kakajabroni@mail.ru" class="team-contact">kakajabroni@mail.ru</a>
+                    </div>
+                    <div class="team-card fade-in">
+                        <h4>Макаренко Артем Александрович</h4>
+                        <span class="team-role">Видеосъёмка, создание сайта</span>
+                        <a href="mailto:Artemmakenko2007@mail.ru" class="team-contact">Artemmakenko2007@mail.ru</a>
+                    </div>
+                    <div class="team-card fade-in">
+                        <h4>Бочаров Никита Дмитриевич</h4>
+                        <span class="team-role">Закупка продуктов, создание сайта</span>
+                        <a href="mailto:niki020408@list.ru" class="team-contact">niki020408@list.ru</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;" class="fade-in">
+                    <p style="color: #555; font-size: 1rem;"><strong>Наставник проекта:</strong> Агаева Надежда Юрьевна (nadinn_ktn@mail.ru)</p>
                 </div>
             </div>
         </section>
@@ -59,18 +141,69 @@
     <button id="scrollTopBtn" title="Наверх">↑</button>
 
     <script>
-        // Кнопка Наверх
+        // 1. Мобильное меню
+        const burgerBtn = document.getElementById('burgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        if(burgerBtn) {
+            burgerBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+        }
+
+        // 2. Кнопка Наверх
         let mybutton = document.getElementById("scrollTopBtn");
-        window.onscroll = function() { scrollFunction() };
-        function scrollFunction() {
+        window.onscroll = function() { 
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
         }
-        mybutton.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+        mybutton.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+
+        // 3. Анимация появления
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+        // 4. Анимация частиц (искорки на фоне)
+        const canvas = document.getElementById('particleCanvas');
+        if(canvas) {
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+            window.addEventListener('resize', resize); resize();
+            
+            for(let i=0; i<50; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 3 + 1,
+                    speedX: Math.random() * 1 - 0.5,
+                    speedY: Math.random() * -1 - 0.5,
+                    alpha: Math.random() * 0.5 + 0.2
+                });
+            }
+            
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(200, 160, 100, ${p.alpha})`;
+                    ctx.fill();
+                    p.x += p.speedX; p.y += p.speedY;
+                    if (p.y < 0) p.y = canvas.height;
+                    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                });
+                requestAnimationFrame(draw);
+            }
+            draw();
         }
     </script>
 </body>

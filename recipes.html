@@ -13,104 +13,142 @@
                 <img src="logo.png" alt="Логотип ВГУИТ" class="logo-img">
                 <h1 class="logo">ВГУИТ | Кулинарная история</h1>
             </a>
-            <nav class="nav">
+            <button class="burger" id="burgerBtn">☰</button>
+            <nav class="nav" id="navMenu">
                 <a href="index.html" class="nav-link">Главная</a>
                 <a href="recipes.html" class="nav-link active">Рецепты и фото</a>
-                <a href="team.html" class="nav-link">Команда</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section" style="background-color: #f0e6dc; padding-bottom: 20px;">
+        <!-- Фотографии -->
+        <section class="section fade-in" style="background-color: #f0e6dc; padding-bottom: 20px;">
             <div class="container">
                 <h2 class="section-title">Фотографии блюд</h2>
                 <p style="text-align: center; color: #555; margin-top: -30px; margin-bottom: 30px;">Нажмите на фото, чтобы увеличить</p>
                 <div class="photo-grid">
                     <div class="photo-card" onclick="openModal(this)">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Салат из сельди">
-                        <p>Салат из сельди ("Черная икра")</p>
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" alt="Салат из сельди">
+                        <p>Салат из сельди</p>
                     </div>
                     <div class="photo-card" onclick="openModal(this)">
-                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Курица с грибами">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop" alt="Курица с грибами">
                         <p>Курица с грибами и сыром</p>
                     </div>
                     <div class="photo-card" onclick="openModal(this)">
-                        <img src="https://avatars.mds.yandex.net/i?id=bfdacfb9fdbc7765cb3d1c90ab4709a2_l-9220416-images-thumbs&ref=rim&n=13&w=900&h=900" alt="Ажурные блинчики">
+                        <img src="https://i.ytimg.com/vi/SyrQh5OEyNE/maxresdefault.jpg" alt="Ажурные блинчики">
                         <p>Ажурные блинчики</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Рецепты -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Семейные рецепты</h2>
+                <h2 class="section-title fade-in">Семейные рецепты</h2>
                 <div class="recipe-grid">
+                    
                     <!-- Рецепт 1 -->
-                    <article class="recipe-card">
-                        <h3>Салат из сельди ("Черная икра")</h3>
-                        <p><strong>Ингредиенты:</strong></p>
-                        <ul>
-                            <li>Сельдь — 1 шт. (200-250 г)</li>
-                            <li>Лук репчатый (средний) — 4 головки</li>
-                            <li>Масло растительное — 0,5 стакана</li>
-                            <li>Томатная паста — 2 ч. л.</li>
-                            <li>Крупа «саго» — 1 стакан</li>
-                        </ul>
-                        <p><strong>Приготовление:</strong></p>
-                        <ol>
-                            <li>Сельдь очистить, удалить кости.</li>
-                            <li>Лук порезать и обжарить на масле. Вытащить лук (масло сохранить).</li>
-                            <li>Лук и сельдь пропустить через мясорубку.</li>
-                            <li>В масло добавить томатную пасту и слегка обжарить.</li>
-                            <li>Отварить саго (2-3 минуты), промыть.</li>
-                            <li>Все ингредиенты смешать. Салат готов!</li>
-                        </ol>
+                    <article class="recipe-card fade-in" id="recipe1">
+                        <div class="recipe-header">
+                            <h3>Салат из сельди</h3>
+                            <div class="recipe-actions">
+                                <button class="action-btn" onclick="printRecipe('recipe1')" title="Распечатать">🖨️</button>
+                                <button class="action-btn" onclick="downloadRecipe('recipe1', 'Салат из сельди')" title="Скачать txt">⬇️</button>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="openTab(this, 'tab1-1')">Ингредиенты</button>
+                            <button class="tab-btn" onclick="openTab(this, 'tab1-2')">Приготовление</button>
+                        </div>
+                        <div id="tab1-1" class="tab-content active">
+                            <ul>
+                                <li>Сельдь — 1 шт. (200-250 г)</li>
+                                <li>Лук репчатый — 4 головки</li>
+                                <li>Масло растительное — 0,5 стакана</li>
+                                <li>Томатная паста — 2 ч. л.</li>
+                                <li>Крупа «саго» — 1 стакан</li>
+                            </ul>
+                        </div>
+                        <div id="tab1-2" class="tab-content">
+                            <ol>
+                                <li>Сельдь очистить, удалить кости.</li>
+                                <li>Лук порезать и обжарить на масле. Вытащить лук (масло сохранить).</li>
+                                <li>Лук и сельдь пропустить через мясорубку.</li>
+                                <li>В масло добавить томатную пасту и слегка обжарить.</li>
+                                <li>Отварить саго (2-3 минуты), промыть.</li>
+                                <li>Все ингредиенты смешать.</li>
+                            </ol>
+                        </div>
                     </article>
 
                     <!-- Рецепт 2 -->
-                    <article class="recipe-card">
-                        <h3>Курица с грибами и сыром</h3>
-                        <p><strong>Ингредиенты:</strong></p>
-                        <ul>
-                            <li>Куриное филе — 4 шт.</li>
-                            <li>Шампиньоны — 300 г</li>
-                            <li>Лук репчатый — 1 шт.</li>
-                            <li>Сыр твердый — 150 г</li>
-                            <li>Сметана или майонез — 100 г</li>
-                            <li>Соль, перец, специи — по вкусу</li>
-                        </ul>
-                        <p><strong>Приготовление:</strong></p>
-                        <ol>
-                            <li>Куриное филе отбить, посолить и поперчить.</li>
-                            <li>Лук и грибы нарезать, обжарить до золотистого цвета.</li>
-                            <li>Выложить филе на противень, сверху грибную начинку.</li>
-                            <li>Посыпать сыром и сбрызнуть сметаной.</li>
-                            <li>Запекать при 180°C около 25-30 минут.</li>
-                        </ol>
+                    <article class="recipe-card fade-in" id="recipe2">
+                        <div class="recipe-header">
+                            <h3>Курица с грибами</h3>
+                            <div class="recipe-actions">
+                                <button class="action-btn" onclick="printRecipe('recipe2')" title="Распечатать">🖨️</button>
+                                <button class="action-btn" onclick="downloadRecipe('recipe2', 'Курица с грибами')" title="Скачать txt">⬇️</button>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="openTab(this, 'tab2-1')">Ингредиенты</button>
+                            <button class="tab-btn" onclick="openTab(this, 'tab2-2')">Приготовление</button>
+                        </div>
+                        <div id="tab2-1" class="tab-content active">
+                            <ul>
+                                <li>Куриное филе — 4 шт.</li>
+                                <li>Шампиньоны — 300 г</li>
+                                <li>Лук репчатый — 1 шт.</li>
+                                <li>Сыр твердый — 150 г</li>
+                                <li>Сметана — 100 г</li>
+                            </ul>
+                        </div>
+                        <div id="tab2-2" class="tab-content">
+                            <ol>
+                                <li>Филе отбить, посолить и поперчить.</li>
+                                <li>Лук и грибы нарезать, обжарить.</li>
+                                <li>Выложить филе на противень, сверху грибы.</li>
+                                <li>Посыпать сыром и сбрызнуть сметаной.</li>
+                                <li>Запекать при 180°C 25-30 минут.</li>
+                            </ol>
+                        </div>
                     </article>
 
                     <!-- Рецепт 3 -->
-                    <article class="recipe-card">
-                        <h3>Ажурные блинчики</h3>
-                        <p><strong>Ингредиенты:</strong></p>
-                        <ul>
-                            <li>Молоко — 1 стакан (250 мл)</li>
-                            <li>Мука пшеничная в/с — 1 стакан + 1 ст. л.</li>
-                            <li>Вода (крутой кипяток) — 1 стакан</li>
-                            <li>Яйца куриные — 2 шт.</li>
-                            <li>Масло растительное — 2 ст. л.</li>
-                            <li>Сахар — 2 ст. л.</li>
-                            <li>Соль — 0,5 ч. л.</li>
-                        </ul>
-                        <p><strong>Приготовление:</strong></p>
-                        <ol>
-                            <li>Смешиваем яйца, сахар и соль до однородной массы.</li>
-                            <li>Добавляем молоко и масло. Вводим просеянную муку, помешивая венчиком.</li>
-                            <li>Вводим крутой кипяток тонкой струйкой. Оставляем тесто на 15-20 минут.</li>
-                            <li>Выпекаем на хорошо разогретой сковороде.</li>
-                        </ol>
+                    <article class="recipe-card fade-in" id="recipe3">
+                        <div class="recipe-header">
+                            <h3>Ажурные блинчики</h3>
+                            <div class="recipe-actions">
+                                <button class="action-btn" onclick="printRecipe('recipe3')" title="Распечатать">🖨️</button>
+                                <button class="action-btn" onclick="downloadRecipe('recipe3', 'Ажурные блинчики')" title="Скачать txt">⬇️</button>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="openTab(this, 'tab3-1')">Ингредиенты</button>
+                            <button class="tab-btn" onclick="openTab(this, 'tab3-2')">Приготовление</button>
+                        </div>
+                        <div id="tab3-1" class="tab-content active">
+                            <ul>
+                                <li>Молоко — 250 мл</li>
+                                <li>Мука — 250 мл + 1 ст. л.</li>
+                                <li>Кипяток — 250 мл</li>
+                                <li>Яйца — 2 шт.</li>
+                                <li>Масло растительное — 2 ст. л.</li>
+                                <li>Сахар — 2 ст. л.</li>
+                                <li>Соль — 0,5 ч. л.</li>
+                            </ul>
+                        </div>
+                        <div id="tab3-2" class="tab-content">
+                            <ol>
+                                <li>Смешать яйца, сахар и соль.</li>
+                                <li>Добавить молоко, масло, муку.</li>
+                                <li>Влить кипяток, помешать, дать постоять 15 мин.</li>
+                                <li>Выпекать на разогретой сковороде.</li>
+                            </ol>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -133,28 +171,103 @@
     <button id="scrollTopBtn" title="Наверх">↑</button>
 
     <script>
-        // Скрипт для модального окна (увеличение фото)
+        // 1. Мобильное меню
+        const burgerBtn = document.getElementById('burgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        if(burgerBtn) {
+            burgerBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+        }
+
+        // 2. Модальное окно фото
         function openModal(element) {
             let imgSrc = element.querySelector('img').src;
             document.getElementById("modalImg").src = imgSrc;
             document.getElementById("imageModal").style.display = "block";
         }
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
+        function closeModal() { document.getElementById("imageModal").style.display = "none"; }
 
-        // Кнопка Наверх
+        // 3. Кнопка Наверх
         let mybutton = document.getElementById("scrollTopBtn");
-        window.onscroll = function() { scrollFunction() };
-        function scrollFunction() {
+        window.onscroll = function() { 
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
         }
-        mybutton.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+        mybutton.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+
+        // 4. Вкладки рецептов
+        function openTab(btn, tabId) {
+            let tabContainer = btn.parentElement.parentElement;
+            let tabs = tabContainer.querySelectorAll('.tab-btn');
+            let contents = tabContainer.querySelectorAll('.tab-content');
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // 5. Анимация появления
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+        // 6. Печать рецепта
+        function printRecipe(id) {
+            let recipe = document.getElementById(id);
+            let contents = recipe.querySelectorAll('.tab-content');
+            let tabs = recipe.querySelectorAll('.tabs');
+            let actions = recipe.querySelectorAll('.recipe-actions');
+            
+            // Временно показываем все вкладки и скрываем кнопки для печати
+            contents.forEach(c => c.classList.add('active'));
+            tabs.forEach(t => t.style.display = 'none');
+            actions.forEach(a => a.style.display = 'none');
+
+            let printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Рецепт</title>');
+            printWindow.document.write('<style>body { font-family: Arial, sans-serif; padding: 20px; } h3 { color: #6b4c3b; } ul, ol { margin-left: 20px; } .tabs { display: none; } .recipe-actions { display: none; }</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(recipe.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+
+            // Возвращаем как было
+            setTimeout(() => {
+                contents.forEach(c => c.classList.remove('active'));
+                if(contents[0]) contents[0].classList.add('active');
+                tabs.forEach(t => t.style.display = 'flex');
+                actions.forEach(a => a.style.display = 'flex');
+            }, 1000);
+        }
+
+        // 7. Скачивание рецепта в TXT
+        function downloadRecipe(id, title) {
+            let recipe = document.getElementById(id);
+            let ingredients = recipe.querySelector('.tab-content[id$="-1"]').innerText;
+            let steps = recipe.querySelector('.tab-content[id$="-2"]').innerText;
+            
+            let textContent = title + "\n\n";
+            textContent += "ИНГРЕДИЕНТЫ:\n" + ingredients + "\n\n";
+            textContent += "ПРИГОТОВЛЕНИЕ:\n" + steps + "\n\n";
+            textContent += "--- Сайт проекта «Кулинарная история поколений ВГУИТ» ---";
+
+            let blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
+            let link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = title + '.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
